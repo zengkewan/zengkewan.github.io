@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zengkewan.github.io</id>
     <title>Kewan</title>
-    <updated>2019-09-04T05:45:24.636Z</updated>
+    <updated>2019-09-04T06:55:22.984Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zengkewan.github.io"/>
     <link rel="self" href="https://zengkewan.github.io/atom.xml"/>
@@ -11,19 +11,19 @@
     <icon>https://zengkewan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Kewan</rights>
     <entry>
-        <title type="html"><![CDATA[数据分析岗位需求现状 2019-08]]></title>
+        <title type="html"><![CDATA[2019 年 8 月国内“数据分析”岗位需求现状]]></title>
         <id>https://zengkewan.github.io/post/DA-job</id>
         <link href="https://zengkewan.github.io/post/DA-job">
         </link>
         <updated>2019-08-20T02:47:02.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="说明">说明</h2>
+        <summary type="html"><![CDATA[<h3 id="说明">说明</h3>
 <ol>
-<li>数据来自2019-08-14拉勾网搜索关键词“数据分析”的职位列表，爬取了依职位数量降序排列的前10个城市,1886条记录。</li>
+<li>数据来自 2019-08-14 拉勾网搜索关键词“数据分析”的职位列表，爬取了依职位数量降序排列的前 10 个城市, 1886 条记录。</li>
 </ol>
 ]]></summary>
-        <content type="html"><![CDATA[<h2 id="说明">说明</h2>
+        <content type="html"><![CDATA[<h3 id="说明">说明</h3>
 <ol>
-<li>数据来自2019-08-14拉勾网搜索关键词“数据分析”的职位列表，爬取了依职位数量降序排列的前10个城市,1886条记录。</li>
+<li>数据来自 2019-08-14 拉勾网搜索关键词“数据分析”的职位列表，爬取了依职位数量降序排列的前 10 个城市, 1886 条记录。</li>
 </ol>
 ]]></content>
     </entry>

@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" >
 
-<title>数据分析岗位需求现状 2019-08 | Kewan</title>
+<title>2019 年 8 月国内“数据分析”岗位需求现状 | Kewan</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zengkewan.github.io/favicon.ico?v=1567575921750">
+<link rel="shortcut icon" href="https://zengkewan.github.io/favicon.ico?v=1567580119335">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zengkewan.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://zengkewan.github.io">
-        <img src="https://zengkewan.github.io/images/avatar.png?v=1567575921750" class="site-logo">
+        <img src="https://zengkewan.github.io/images/avatar.png?v=1567580119335" class="site-logo">
         <h1 class="site-title">Kewan</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -94,58 +94,49 @@ Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea<
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">数据分析岗位需求现状 2019-08</h2>
+            <h2 class="post-title">2019 年 8 月国内“数据分析”岗位需求现状</h2>
             <div class="post-date">2019-08-20</div>
             
               <div class="feature-container" style="background-image: url('https://zengkewan.github.io/post-images/DA-job.png')">
               </div>
             
             <div class="post-content">
-              <h2 id="说明">说明</h2>
+              <h3 id="说明">说明</h3>
 <ol>
-<li>数据来自2019-08-14拉勾网搜索关键词“数据分析”的职位列表，爬取了依职位数量降序排列的前10个城市,1886条记录。</li>
+<li>数据来自 2019-08-14 拉勾网搜索关键词“数据分析”的职位列表，爬取了依职位数量降序排列的前 10 个城市, 1886 条记录。</li>
 </ol>
 <!-- more -->
-<ol start="2">
-<li>由于拉勾一次只显示30页×15个职位，故对超过450个职位的城市，降序爬取数量超过50个职位的一级行政区。</li>
-<li>本文使用pandas进行数据处理和分析，结合seaborn和pyecharts包进行数据可视化。Python运行版本为3.6.7。</li>
-<li>主要的文件为：</li>
-</ol>
+<p> </p>
+<h3 id="分析目标">分析目标</h3>
 <ul>
-<li>lagou_analysis.ipynb：Jupyter notebook代码，对拉勾数据分析职位招聘状况进行分析</li>
+<li>由于近期致力于找一份数据分析相关的工作，故想通过数据观察一下市场对数据分析师的需求状况，以及筛选出适合尝试的公司和职位。<br>
+ </li>
 </ul>
-<ol start="5">
-<li>数据：</li>
-</ol>
+<h3 id="数据清洗提要">数据清洗提要</h3>
 <ul>
-<li>lagou0814_total.csv</li>
-</ul>
-<h2 id="分析目标">分析目标</h2>
-<ul>
-<li>由于近期致力于找一份数据分析相关的工作，故想通过数据考察一下市场对数据分析师的需求状况，以及筛选出适合尝试的公司和职位。</li>
-</ul>
-<h2 id="数据清洗提要">数据清洗提要</h2>
-<ul>
-<li>爬取了13个字段，共1879条不重复记录。</li>
+<li>爬取了 13 个字段，共 1879 条不重复记录。</li>
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5.png" alt="数据基本情况"></p>
 <ul>
-<li>由于原数据‘工资’字段给出的都是薪资范围，而且很多20k-40k这种大范围的写法，所以取了给出工资范围的下界作为工资的参考值，增加了‘工资下界’这个字段存储以元为单位的工资参考值。</li>
+<li>由于原数据‘工资’字段给出的都是薪资范围，而且很多 20k-40k 这种大范围的写法</li>
+<li>所以增加了‘工资下界’这个字段存储以元为单位的工资参考值，后面所有统计计算皆以‘工资下界’字段的值为参考加入计算。</li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%B7%A5%E8%B5%84%E4%B8%8B%E7%95%8C.png" alt="工资下界"></p>
-<h2 id="数据分析">数据分析</h2>
+<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%B7%A5%E8%B5%84%E4%B8%8B%E7%95%8C.png" alt="工资下界"><br>
+ </p>
+<h3 id="数据分析">数据分析</h3>
 <h4 id="提出问题">提出问题</h4>
 <ol>
 <li>城市与职位</li>
 <li>学历与职位</li>
 <li>工作经验与职位</li>
 <li>公司与职位</li>
-<li>职位发布时间</li>
+<li>职位发布时间<br>
+ </li>
 </ol>
 <h4 id="城市与职位数量">城市与职位数量</h4>
 <ul>
 <li>
-<p>北上广深杭这五个城市毫无疑问地占据了前五的位置，其中北京有740个职位，占39.38%；上海有398个，占21.18%；北上广深杭这五个城市占了92.33%，说明这个职位还是集中在一线城市。</p>
+<p>北上广深杭这五个城市毫无疑问地占据了前五的位置，北上广深杭这五个城市总共占比92.33%，说明这个职位还是集中在一线城市。</p>
 </li>
 <li>
 <p>如果把数据爬全，前5个城市的职位数量占总体的比例应该会比目前这个数低几个百分点，但是影响也不会很大。</p>
@@ -155,24 +146,29 @@ Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea<
 </li>
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%9F%8E%E5%B8%82%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F.png" alt="城市与职位数量"></p>
+<p> </p>
 <h4 id="城市与薪资">城市与薪资</h4>
 <ul>
-<li>以城市分组，看不同城市平均工资怎么样，发现薪资前五名中，厦门竟然在列，不过厦门样本量太小，数据不具有代表性，还是北上广深杭的天下。</li>
+<li>平均薪资前五的城市中，厦门竟然在列，不过厦门样本量太小，数据不具有代表性，还是北上广深杭最高。</li>
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%90%84%E5%9F%8E%E5%B8%82%E5%B9%B3%E5%9D%87%E5%B7%A5%E8%B5%84.png" alt="各城市平均工资"></p>
 <ul>
 <li>通过小提琴图看薪资分布，从图中看，开出行业顶级高薪的，是北上深杭。</li>
 </ul>
 <img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/城市与薪资分布.png" width="80%" height="80%" />
+<p> </p>
 <h4 id="学历与职位数量">学历与职位数量</h4>
 <ul>
-<li>要求至少本科毕业的数量是最多的，约占83.6%。</li>
-<li>要求博士以上的最少，毕竟相对于机器学习和数据挖掘之类的岗位，数据分析算是对技术要求相对较低的。</li>
+<li>要求至少本科毕业的数量是最多的，约占 83.6% 。</li>
+<li>要求博士以上的最少，相对于机器学习和数据挖掘之类的岗位，数据分析是对技术要求较低的。</li>
 <li>写学历不限的，多半是字段里填不限，但是在详情里要求了学历。</li>
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B2%97%E5%AD%A6%E5%8E%86%E8%A6%81%E6%B1%82.png" alt="数据分析岗位学历要求"></p>
+<p> </p>
 <h4 id="学历与薪资">学历与薪资</h4>
-<p>基本上是正相关的关系，博士最高，接着是硕士、本科、大专。</p>
+<ul>
+<li>基本上是正相关的关系，博士最高，接着是硕士、本科、大专。</li>
+</ul>
 <blockquote>
 <p>学历要求与平均薪资<br>
 大专：     8505.75<br>
@@ -186,13 +182,15 @@ Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea<
 <li>数据分析行业在中国快速发展，也就是近四五年以来的事情，资深从业者的数量累积有限，博士学历的资深从业者更是寥寥。</li>
 </ul>
 <img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/学历与薪资箱形图.png" width="80%" height="80%" />
+<p> </p>
 <h4 id="工作经验与职位数量">工作经验与职位数量</h4>
 <ul>
-<li>要求有一年以上经验的加起来占九成，要求3-5年的最多。</li>
-<li>应届毕业生和一年以下的只占8.1%，表明了公司想要又相对年轻又有经验的熟练工。</li>
-<li>而那10.8%不限的，还是那句老话，基本上都在详情里要求了经验，不是1-3年，就是3-5年。</li>
+<li>要求有一年以上经验的加起来占九成，要求 3-5 年的最多。</li>
+<li>应届毕业生和一年以下的只占 8.1% ，表明了公司想要又相对年轻又有经验的熟练工。</li>
+<li>而那 10.8% 经验不限的，基本上都在详情里要求了经验。</li>
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B2%97%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E8%A6%81%E6%B1%82.png" alt="数据分析岗工作经验要求"></p>
+<p> </p>
 <h4 id="工作经验与薪资">工作经验与薪资</h4>
 <ul>
 <li>很直观的正相关关系，工作经验多薪资越高，说明这行的经验积累是有价值的，但是因为看重经验，所以同时也对新人不是很友好</li>
@@ -209,34 +207,35 @@ Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea<
 </blockquote>
 <ul>
 <li>看看分布，每一档上面都有离群值，意味着一定程度的能者多得，一小部分特别有才华的，可以拿到高出均值好几倍的薪资。</li>
-<li>从这个箱形图也可以看到，经验不限是假的，总体来说很接近1-3年的经验要求。</li>
+<li>从这个箱形图也可以看到，经验不限并非不限，以薪资来看总体很接近 1-3 年的经验要求。</li>
 </ul>
 <img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/工作经验与薪资分布.png" width="80%" height="80%" />
+<p> </p>
 <h4 id="公司与职位">公司与职位</h4>
 <ul>
-<li>在招职位数量前15的公司，多数是大家熟悉的知名公司。</li>
-<li>阿里巴巴和百度并不在列，我去阿里和百度的招聘官网看了，职能划分很细，而且都没有叫‘数据分析’的岗位。</li>
-<li>字节跳动一骑绝尘，真·数据驱动公司。</li>
+<li>在招职位数量前 15 的公司，多数是大家熟悉的知名公司。</li>
+<li>阿里巴巴和百度并不在列，我去阿里和百度的招聘官网看了，职能划分很细，而且都没有叫‘数据分析’的岗位。多是并入到别的职能细分里面去了，比如‘数据产品’、‘数据运营’</li>
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%85%AC%E5%8F%B8%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F.png" alt="公司与职位数量"></p>
 <ul>
-<li>‘公司规模’2000人以上的公司发布的职位总数量最多，呈正相关，这方面的需求还是以中大型企业为主，薪资总体来说也是大型企业给的高。</li>
+<li>公司规模 2000 人以上的公司发布的职位总数量最多，呈正相关，这方面的需求还是以中大型企业为主，薪资总体来说也是大型企业给的高。</li>
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%85%AC%E5%8F%B8%E8%A7%84%E6%A8%A1%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F%E5%92%8C%E8%96%AA%E8%B5%84.png" alt="公司规模与职位数量和薪资"></p>
+<p> </p>
 <h4 id="职位发布时间">职位发布时间</h4>
 <ul>
 <li>
-<p>这就很值得玩味了，我8月14号爬的数据，‘发布时间’为当天的竟然数量最多，比例超群。<br>
+<p>这就很值得玩味了， 8 月 14 日爬的数据，‘发布时间’为当天的竟然数量最多，而且占比非常大。<br>
 <img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%8F%91%E5%B8%83%E6%97%B6%E9%97%B4%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F.png" alt="发布时间与职位数量"></p>
 </li>
 <li>
-<p>我猜测这个‘发布时间’并非职位首次发布的时间。</p>
+<p>猜测这个‘发布时间’并非职位首次发布的时间。</p>
 </li>
 <li>
-<p>于是我8月18号又爬了‘数据分析’关键词在北京的职位列表。</p>
+<p>于是 8 月 18 日又爬了‘数据分析’关键词在北京的职位列表。</p>
 </li>
 <li>
-<p>可以看到相同的公司、职位，过了几天，发布时间集体变了，而且精确到秒全都一模一样。</p>
+<p>可以看到相同的公司、职位，过了几天，发布时间集体变了，并且精确到秒全都一模一样。</p>
 </li>
 <li>
 <p>所以企业端很可能有一个【一键重新发布】之类的按钮。</p>
@@ -244,29 +243,32 @@ Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea<
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%8F%91%E5%B8%83%E6%97%B6%E9%97%B4%E5%AF%B9%E6%AF%94.png" alt="发布时间对比"></p>
 <ul>
-<li>我又调查到，拉勾把职位收藏以后，可以看到职位第一次发布的时间，我搜了刚刚那个公司的职位，把搜索页截图那几个职位收藏了：</li>
+<li>又得知，拉勾把职位收藏以后，可以看到职位第一次发布的时间，于是搜索了上面那个公司的职位，把搜索页截图的几个职位收藏：</li>
 </ul>
 <img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/搜索页发布时间.png" width="80%" height="80%" />
 <img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/收藏页发布时间.png" width="80%" height="80%" />
 <ul>
 <li>这就意味着，有部分是改一改之前发布的职位重新发布一下省事，有部分职位可能是公司用来挂曝光度的。</li>
-<li>尽管如此，就算‘发布时间’字段并非真正首次发布的时间，但是至少说明有人为操作的痕迹，只是降低了有效职位比例。</li>
+<li>‘发布时间’字段并非真正首次发布的时间，只能说明有人为操作的痕迹，这降低了有效职位的比例。</li>
 </ul>
+<p> <br>
+ </p>
 <h2 id="总结">总结</h2>
 <p>从以上的数据分析我们可以知道：</p>
 <ol>
-<li>数据分析职位的招聘，主要集中在“北上深杭广”这5个大城市（占九成），北京以740个岗位（39.4%）遥遥领先。</li>
-<li>平均薪资为14520元人民币，“北上广深杭”这五个城市中，北京的薪资最高，再者是上海、深圳。</li>
-<li>学历要求以本科居多83.6%，薪资和学历基本上是正相关的关系，博士最高，接着是硕士、本科、大专。</li>
-<li>工作经验要求3-5年的最多（41.6%），1-3年的次之（25.0%），而应届毕业生和一年以下的加起来只占8.1%，都表明了公司想要相对年轻又有经验的熟练工。</li>
-<li>工作经验与薪资呈正相关，应届毕业生和1年以下的在6k左右，从1-3年开始就是11k往上了。</li>
-<li>在招职位数量前15的公司，多数是大家熟悉的知名公司，比如字节跳动、腾讯、美团点评、拼多多、京东集团等。</li>
-<li>‘公司规模’2000人以上的公司发布的职位总数量最多，呈正相关，这方面的需求还是以中大型企业为主，薪资总体来说也是大型企业给的高。</li>
+<li>数据分析职位的招聘，主要集中在“北上深杭广”这 5 个大城市（占九成），北京以 740 个岗位（39.4%）遥遥领先。</li>
+<li>平均薪资为 14520 元人民币，“北上广深杭”这五个城市中，北京的薪资最高，再者是上海、深圳。</li>
+<li>学历要求以本科居多（83.6%），薪资和学历基本上是正相关的关系，博士最高，接着是硕士、本科、大专。</li>
+<li>工作经验要求 3-5 年的最多（41.6%）， 1-3 年的次之（25.0%），而应届毕业生和一年以下的加起来只占 8.1% ，都表明了公司想要相对年轻又有经验的熟练工。</li>
+<li>工作经验与薪资呈正相关，应届毕业生和1年以下的在 6k 左右，从 1-3 年开始 11k 往上。</li>
+<li>在招职位数量前 15 的公司，多数是大家熟悉的知名公司，比如字节跳动、腾讯、美团点评、拼多多、京东集团等。</li>
+<li>公司规模 2000 人以上的公司发布的职位总数量最多，这方面的需求还是以中大型企业为主，薪资总体来说也是大型企业给的高。</li>
 <li>关于职位发布时间的分析，告诉我们有效职位的比例比预想的低。</li>
 </ol>
 <hr>
+<p> </p>
 <h4 id="筛选职位">筛选职位</h4>
-<p>那我就来筛选一下职位，条件是：</p>
+<p>筛选一下职位，条件是：</p>
 <ul>
 <li>北京的</li>
 <li>公司规模150-500人及以上的</li>
@@ -275,17 +277,17 @@ Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea<
 <li>8月10号以后人为操作过的</li>
 </ul>
 <p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E7%AD%9B%E9%80%89%E7%BB%93%E6%9E%9C%E6%95%B0%E9%87%8F.png" alt="筛选结果数量"></p>
-<p>剩下的职位中行业类型的统计结果是(职位数/公司数）：</p>
+<p>剩下的职位中，按行业类型统计的结果是（职位数/公司数）：</p>
 <blockquote>
 <p>行业类型<br>
-文娱/内容：40/10（字节跳动贡献太多）<br>
+文娱/内容：40/10（字节跳动职位数多）<br>
 金融：32/25<br>
 企业/数据服务：30/20<br>
 电商/生活：22/18<br>
 教育：11/7</p>
 </blockquote>
-<p>还有一些不能并到大类里的细分类型，游戏、硬件、社交，工具、广告营销、信息安全、医疗健康，都是个位数。</p>
-<p>依此观察有针对性地做跟行业类型中的大类相关的项目，提高竞争力。</p>
+<p>还有一些不能并到大类里的细分类型，都是个位数：游戏、硬件、社交，工具、广告营销、信息安全、医疗健康。</p>
+<p>以上观察为求职的后续努力，提供了一些方向性的指示。再会。</p>
 
             </div>
             
