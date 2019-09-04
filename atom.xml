@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zengkewan.github.io</id>
     <title>Gridea</title>
-    <updated>2019-09-04T02:39:45.741Z</updated>
+    <updated>2019-09-04T02:40:15.598Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zengkewan.github.io"/>
     <link rel="self" href="https://zengkewan.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://zengkewan.github.io/images/avatar.png</logo>
     <icon>https://zengkewan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://zengkewan.github.io/post/about</id>
+        <link href="https://zengkewan.github.io/post/about">
+        </link>
+        <updated>2019-01-25T11:09:48.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://zengkewan.github.io/post/hello-gridea</id>
