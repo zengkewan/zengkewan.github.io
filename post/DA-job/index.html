@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zengkewan.github.io/favicon.ico?v=1567569132035">
+<link rel="shortcut icon" href="https://zengkewan.github.io/favicon.ico?v=1567569366258">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zengkewan.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://zengkewan.github.io">
-        <img src="https://zengkewan.github.io/images/avatar.png?v=1567569132035" class="site-logo">
+        <img src="https://zengkewan.github.io/images/avatar.png?v=1567569366258" class="site-logo">
         <h1 class="site-title">Gridea</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -102,6 +102,9 @@
               <h2 id="说明">说明</h2>
 <ol>
 <li>数据来自2019-08-14拉勾网搜索关键词“数据分析”的职位列表，爬取了依职位数量降序排列的前10个城市,1886条记录。</li>
+</ol>
+<!-- more -->
+<ol start="2">
 <li>由于拉勾一次只显示30页×15个职位，故对超过450个职位的城市，降序爬取数量超过50个职位的一级行政区。</li>
 <li>本文使用pandas进行数据处理和分析，结合seaborn和pyecharts包进行数据可视化。Python运行版本为3.6.7。</li>
 <li>主要的文件为：</li>
