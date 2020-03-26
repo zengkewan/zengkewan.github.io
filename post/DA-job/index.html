@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://zengkewan.github.io/favicon.ico?v=1567669187549">
+<link rel="shortcut icon" href="https://zengkewan.github.io/favicon.ico?v=1585204706300">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://zengkewan.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://zengkewan.github.io">
-        <img src="https://zengkewan.github.io/images/avatar.png?v=1567669187549" class="site-logo">
+        <img src="https://zengkewan.github.io/images/avatar.png?v=1585204706300" class="site-logo">
         <h1 class="site-title">Kewan</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -113,7 +113,7 @@
 <ul>
 <li>爬取了 13 个字段，共 1879 条不重复记录。</li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5.png" alt="数据基本情况"></p>
+<figure data-type="image" tabindex="1"><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%9F%BA%E6%9C%AC%E6%83%85%E5%86%B5.png" alt="数据基本情况"></figure>
 <ul>
 <li>由于原数据‘工资’字段给出的都是薪资范围，而且很多 20k-40k 这种大范围的写法</li>
 <li>所以增加了‘工资下界’这个字段存储以元为单位的工资参考值，后面所有统计计算皆以‘工资下界’字段的值为参考加入计算。</li>
@@ -136,13 +136,13 @@
 <li>如果把数据爬全，前5个城市的职位数量占总体的比例应该会比目前这个数低几个百分点，但是影响也不会很大。</li>
 <li>另外值得注意的是，深圳排到了第三，在广州和杭州的前面，而且高出的比例不低。</li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%9F%8E%E5%B8%82%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F.png" alt="城市与职位数量"></p>
+<figure data-type="image" tabindex="2"><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%9F%8E%E5%B8%82%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F.png" alt="城市与职位数量"></figure>
 <p> </p>
 <h4 id="城市与薪资">城市与薪资</h4>
 <ul>
 <li>平均薪资前五的城市中，厦门竟然在列，不过厦门样本量太小，数据不具有代表性，还是北上广深杭最高。</li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%90%84%E5%9F%8E%E5%B8%82%E5%B9%B3%E5%9D%87%E5%B7%A5%E8%B5%84.png" alt="各城市平均工资"></p>
+<figure data-type="image" tabindex="3"><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%90%84%E5%9F%8E%E5%B8%82%E5%B9%B3%E5%9D%87%E5%B7%A5%E8%B5%84.png" alt="各城市平均工资"></figure>
 <ul>
 <li>通过小提琴图看薪资分布，从图中看，开出行业顶级高薪的，是北上深杭。</li>
 </ul>
@@ -154,7 +154,7 @@
 <li>要求博士以上的最少，相对于机器学习和数据挖掘之类的岗位，数据分析是对技术要求较低的。</li>
 <li>写学历不限的，多半是字段里填不限，但是在详情里要求了学历。</li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B2%97%E5%AD%A6%E5%8E%86%E8%A6%81%E6%B1%82.png" alt="数据分析岗位学历要求"></p>
+<figure data-type="image" tabindex="4"><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B2%97%E5%AD%A6%E5%8E%86%E8%A6%81%E6%B1%82.png" alt="数据分析岗位学历要求"></figure>
 <p> </p>
 <h4 id="学历与薪资">学历与薪资</h4>
 <ul>
@@ -180,7 +180,7 @@
 <li>应届毕业生和一年以下的只占 8.1% ，表明了公司想要又相对年轻又有经验的熟练工。</li>
 <li>而那 10.8% 经验不限的，基本上都在详情里要求了经验。</li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B2%97%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E8%A6%81%E6%B1%82.png" alt="数据分析岗工作经验要求"></p>
+<figure data-type="image" tabindex="5"><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B2%97%E5%B7%A5%E4%BD%9C%E7%BB%8F%E9%AA%8C%E8%A6%81%E6%B1%82.png" alt="数据分析岗工作经验要求"></figure>
 <p> </p>
 <h4 id="工作经验与薪资">工作经验与薪资</h4>
 <ul>
@@ -207,11 +207,11 @@
 <li>在招职位数量前 15 的公司，多数是大家熟悉的知名公司。</li>
 <li>阿里巴巴和百度并不在列，我去阿里和百度的招聘官网看了，职能划分很细，而且都没有叫‘数据分析’的岗位。多是并入到别的职能细分里面去了，比如‘数据产品’、‘数据运营’</li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%85%AC%E5%8F%B8%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F.png" alt="公司与职位数量"></p>
+<figure data-type="image" tabindex="6"><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%85%AC%E5%8F%B8%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F.png" alt="公司与职位数量"></figure>
 <ul>
 <li>公司规模 2000 人以上的公司发布的职位总数量最多，呈正相关，这方面的需求还是以中大型企业为主，薪资总体来说也是大型企业给的高。</li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%85%AC%E5%8F%B8%E8%A7%84%E6%A8%A1%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F%E5%92%8C%E8%96%AA%E8%B5%84.png" alt="公司规模与职位数量和薪资"></p>
+<figure data-type="image" tabindex="7"><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%85%AC%E5%8F%B8%E8%A7%84%E6%A8%A1%E4%B8%8E%E8%81%8C%E4%BD%8D%E6%95%B0%E9%87%8F%E5%92%8C%E8%96%AA%E8%B5%84.png" alt="公司规模与职位数量和薪资"></figure>
 <p> </p>
 <h4 id="职位发布时间">职位发布时间</h4>
 <ul>
@@ -232,7 +232,7 @@
 <p>所以企业端很可能有一个【一键重新发布】之类的按钮。</p>
 </li>
 </ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%8F%91%E5%B8%83%E6%97%B6%E9%97%B4%E5%AF%B9%E6%AF%94.png" alt="发布时间对比"></p>
+<figure data-type="image" tabindex="8"><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E5%8F%91%E5%B8%83%E6%97%B6%E9%97%B4%E5%AF%B9%E6%AF%94.png" alt="发布时间对比"></figure>
 <ul>
 <li>又得知，拉勾把职位收藏以后，可以看到职位第一次发布的时间，于是搜索了上面那个公司的职位，把搜索页截图的几个职位收藏：</li>
 </ul>
@@ -258,28 +258,6 @@
  </li>
 </ol>
 <hr>
-<p> </p>
-<h4 id="筛选职位">筛选职位</h4>
-<p>筛选一下职位，条件是：</p>
-<ul>
-<li>北京的</li>
-<li>公司规模150-500人及以上的</li>
-<li>学历要求本科的</li>
-<li>经验要求1-3年及以下的</li>
-<li>8月10号以后人为操作过的</li>
-</ul>
-<p><img src="https://github.com/zengkewan/python_DA/raw/master/lagou_analysis/%E7%AD%9B%E9%80%89%E7%BB%93%E6%9E%9C%E6%95%B0%E9%87%8F.png" alt="筛选结果数量"></p>
-<p>剩下的职位中，按行业类型统计的结果是（职位数/公司数）：</p>
-<blockquote>
-<p>行业类型<br>
-文娱/内容：40/10（字节跳动职位数多）<br>
-金融：32/25<br>
-企业/数据服务：30/20<br>
-电商/生活：22/18<br>
-教育：11/7</p>
-</blockquote>
-<p>还有一些不能并到大类里的细分类型，都是个位数：游戏、硬件、社交，工具、广告营销、信息安全、医疗健康。</p>
-<p>以上观察为后续的求职努力提供了一些方向性的指示。再会。</p>
 
             </div>
             

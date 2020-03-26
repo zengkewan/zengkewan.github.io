@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zengkewan.github.io</id>
     <title>Kewan</title>
-    <updated>2019-09-05T07:39:50.285Z</updated>
+    <updated>2020-03-26T06:38:34.210Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zengkewan.github.io"/>
     <link rel="self" href="https://zengkewan.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://zengkewan.github.io/images/avatar.png</logo>
     <icon>https://zengkewan.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Kewan</rights>
+    <rights>All rights reserved 2020, Kewan</rights>
     <entry>
         <title type="html"><![CDATA[2019 年 8 月国内“数据分析”岗位需求现状]]></title>
         <id>https://zengkewan.github.io/post/DA-job</id>
